@@ -1,0 +1,466 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+
+h1,h2,h3,h4,h5,h6 {
+    letter-spacing: 1px;
+    font-family: $font1;
+}
+
+h1.section-title {
+    span {
+        width: 30px;
+        background-color: $dark-gray;
+        height: 2px;
+        display: inline-block;
+        vertical-align:middle;
+    }
+
+    span.left {
+        margin-right: 2rem;
+    }
+
+    span.right {
+        margin-left: 2rem;
+    }
+}
+
+
+p {
+    margin-top: 1.5rem;
+}
+
+.h0 {
+    font-size: 12em;
+}
+
+blockquote#quote-banner{
+    color: white
+}
+
+button, .button {
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.button.hollow:hover {
+    color: $white;
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+.columns {
+    padding-top: .9375rem;
+    padding-bottom: .9375rem;
+}
+
+.sticky {
+    width: 100%;
+    position: fixed;
+}
+
+.sticky-container {
+    z-index: 1;
+}
+
+.top-bar{
+    width: 100%;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    position: fixed;
+    vertical-align: middle;
+    
+    .top-bar-right {
+        padding: .5rem;
+    }
+    
+    a{
+        color: $dark-gray;
+        text-transform: uppercase;
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+    
+    }
+    a:hover {
+        color: $primary-color;
+    }
+}
+
+.title-bar{
+    position: fixed;
+    width: 100%;
+    z-index:9999;
+
+
+    .title-bar-title {
+        img {
+            height: 80%;
+            width: 80%
+        }
+    }
+
+    .menu-icon {
+        float: right
+    }
+}
+
+
+.shadowed{
+    -webkit-box-shadow: 0px 2px 5px -2px rgba(51,51,51,1);
+    -moz-box-shadow: 0px 2px 5px -2px rgba(51,51,51,1);
+    box-shadow: 0px 2px 5px -2px rgba(51,51,51,1);
+    padding-top : 0px;
+    padding-bottom: 0px;
+    transition: padding 1s ease;
+}
+
+.menu-text {
+    font-family: $font1;
+    font-size: 2rem;
+    font-weight: normal;
+    text-transform: none;
+}
+
+section{
+    padding: 5rem 3rem;    
+}
+
+section.grey {
+    background-color: $light-gray;
+}
+
+section.center {
+    text-align: center;
+}
+
+section.primary {
+    background-color:$primary-color;
+    color:$white;
+}
+
+section#banner {
+    background: url("img/banner.jpg") center center no-repeat;
+    background-size: cover;
+    top: 0 !important;
+    height: 90%;
+    position: relative;
+    padding-top:230px;
+    color: $white;
+    // text-shadow: 1px 2px 2px rgba(0,0,0,0.3);
+    font-family: $font1;
+    text-align: left;
+    vertical-align: middle;
+    font-size:1.5rem;
+
+    h4{
+        font-family: $font2;
+        margin-bottom:0;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-family: $font2;
+        bottom: 30%;
+        position:absolute;
+    }
+
+    a.button {
+        color: $white;
+        border-color: $white;
+        bottom: 20%;
+        position:absolute;
+        font-family: $font2;
+    }
+}
+
+.overlay{
+    content: "";
+    height: 90%;
+    position: relative;
+    top: 0;
+    background-color: $primary-color;
+    overlay: .6;
+}
+
+// section#works{
+//     background: url("img/paven.png");
+//     div{
+//         padding: 2rem 0;
+//     }
+// }
+
+section#tentang{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.01), 
+      rgba(0, 0, 0, 0.01)
+    ),url("img/paven.png");
+
+    text-align: center;
+    
+    div{
+        padding: 2.5rem 0;
+        
+        div > img {
+            left: -300px;
+        }
+    }
+}
+
+// section#stat {
+//     background: url("img/paven.png");
+//     color: $dark-gray;
+// }
+
+section#fokus {
+    padding-top: 0px;
+    padding-bottom: 1rem;
+
+    .row {
+        transform: translateY(-70px);
+    }
+
+    .callout{
+        border: 1px solid #e2e2e2;
+        border-radius: 5px;
+        padding-bottom: 2rem;
+
+        h1,h2,h3,h4,h5,h6 {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        img {
+            margin: auto;
+            display: block;
+            max-height: 120px;
+
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+
+    .callout#thumbnail:hover {
+        background-color: $light-gray;
+        
+        img {
+            transform: translateY(-10px);
+            -webkit-transition: -webkit-transform 0.3s ease-in-out;
+        }
+    }
+}
+
+section#works {
+    background: $white;
+    padding-top: 3rem;
+
+    .callout {
+        padding: 0px !important;
+        text-align: left;
+        border-radius: 3px;
+        margin-bottom: 0px;
+
+        .columns {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .textcol {
+            padding: 1rem;
+            padding-right: 2rem;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .callout:hover {
+        
+        img {
+            opacity: 0.8;
+        }
+    }
+
+}
+
+section#respon {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.01), 
+      rgba(0, 0, 0, 0.01)
+    ),url("img/paven.png");
+}
+//#bg1{
+//    background: url("img/img1.jpg") center center no-repeat;
+//    background-size: cover; 
+//    height: 100%;
+//}
+
+
+section#head-karir {
+    background: url("img/banner.jpg") center center no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    color: $white;
+    padding-top:10rem;
+}
+
+section#error {
+    background: url("img/banner.jpg") center center no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 100%;
+    color: $white;
+}
+
+
+
+
+
+.subheader{
+    margin-top: .5rem;
+}
+
+section.footer {
+    background: url("img/px.png");
+    min-height: 20px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    color: $white;
+    font-size: 0.8rem;
+    
+    li {
+        margin: 0.3rem;
+    }
+    a {
+        color: $white;
+    }
+    
+    a:hover {
+        color: $primary-color;
+    }
+    
+    .menu>li>a {
+        padding-left: 0px;
+    }
+}
+
+.accordion-title{
+    font-size: 1rem;
+    color: $dark-gray;
+    font-weight: 700;
+    padding-right: 20px;
+}
+
+.accordion-title:hover, .accordion-title:focus {
+    color: $dark-gray;
+}
+
+.accordion-content {
+    color: $dark-gray;
+}
+
+footer {
+    background-color: $dark-gray;
+    padding: 0.3rem;
+    color: $light-gray;
+    font-size: 10px;
+    text-align: center;
+}
+
+.img-block {
+    position: relative;
+    text-align:center;
+    max-height: 600px;
+    max-width: 600px;
+    
+    img {
+        width: 100%;
+        // -webkit-filter: grayscale(100%);
+        // filter: grayscale(100%);
+    }
+
+
+}
+
+.img-block .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0, 0, 0, .6);
+    color: #FFF;
+
+    h1,h4 {
+        margin: 2rem;
+    }
+}
+
+.input-group-label {
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+}
+
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}

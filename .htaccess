@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^home index.php
+RewriteRule ^karir karir.php
+RewriteRule ^portofolio portofolio.html
+RewriteRule ^error error.html
+RewriteRule ^ojs w-ojs.php
+ErrorDocument 404 error.html

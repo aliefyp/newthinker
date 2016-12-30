@@ -1,0 +1,232 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "email@example.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinker Studio | Home</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="css/img/thinker-icon.png">
+</head>
+
+<body>
+    <div class="title-bar" data-responsive-toggle="thinkertop" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+    </div>
+    <div data-sticky-container>
+        <div class="sticky" data-sticky stickTo="top" data-margin-top="0" id="thinkertop">
+            <nav class="top-bar" data-magellan data-options="barOffset:30;" activeClass="active">
+                <div class="top-bar-left">
+                    <ul class="menu">
+                        <a href="home"><li class="menu-text"><img src="css/img/logo.png"/></li></a>
+                        
+                    </ul>
+                </div>
+                <div class="top-bar-right">
+                    <ul class="menu" data-dropdown-menu>
+                        <li><a href="error">Portofolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="karir">Karir</a></li>
+                        <li><a href="www.facebook.com/thinkerStudio"><i class="fa fa-facebook"></i></a></li>
+                        <li><a data-open="email"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <section class="center hide-for-small" id="banner">
+        <div class="row" data-magellan>
+            <h4>Membantu Anda mengembangkan</h4>
+            <h1 id="tagline"></h1>
+            <a class="large hollow button" href="#tentang">Cari tahu!</a>
+        </div>
+    </section>
+
+
+    <section id="tentang" data-magellan-target="tentang">
+        <div class="row">
+            <div class="large-6 columns">
+                <img src="css/img/img-banner.png" id="ilus1">
+            </div>
+            <div class="large-6 columns">
+                <h1 class="section-title"><span class="left"></span>SEKILAS<span class="right"></span></h1>
+                <p>Thinker Studio merupakan penyedia jasa di bidang Teknologi Informasi dan seni yang berdiri pada tahun 2014 dan bertempat di Surabaya. Kami sedang berfokus mengembangkan berbagai macam proyek Teknologi Informasi maupun desain. Kami telah berkembang dan menjalin kerja sama dengan berbagai instansi.</p>
+<!--                <p>kami memadukan teknologi dan seni</p>-->
+                <br>
+                <!-- <a class="large button">Lihat selengkapnya</a> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="primary" id="stat">
+        <div class="row">
+            <div class="large-6 columns">.</div>
+            <div class="large-6 columns">
+                <img src="css/img/mac.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="center" id="fokus">
+        <div class="row">
+            <h1 class="section-title"><span class="left"></span>FOKUS<span class="right"></span></h1>
+            <p>kami fokus mengembangkan aplikasi berbasis web</p>
+        </div>
+        <br>
+        <div class="row" data-magellan>
+            <div class="large-3 columns">
+                <a href="#respon" class="subfokus">
+                    <div class="callout" id="thumbnail">
+                        <img src="css/img/img-consult.png">
+                        <h4>Konsultasi IT</h4>
+                        <p>Penawaran solusi IT terbaik untuk bisnis Anda</p>
+                    </div>
+                </a>
+            </div>
+            <div class="large-3 columns">
+                <a href="#respon" class="subfokus">
+                    <div class="callout" id="thumbnail">
+                        <img src="css/img/img-si.png">
+                        <h4>Sistem Informasi</h4>
+                        <p>Integrasi seluruh proses bisnis dalam satu sistem</p>
+                    </div>
+                </a>
+            </div>
+            <div class="large-3 columns">
+                <a href="#respon" class="subfokus">
+                    <div class="callout" id="thumbnail">
+                        <img src="css/img/img-design.png">
+                        <h4>Desain Web</h4>
+                        <p>IT dan seni jadi kombinasi sempurna untuk bisnis Anda</p>
+                    </div>
+                </a>
+            </div>
+            <div class="large-3 columns">
+                <a href="#respon" class="subfokus">
+                    <div class="callout" id="thumbnail">
+                        <img src="css/img/img-app.png">
+                        <h4>Aplikasi</h4>
+                        <p>Mulai membangun aplikasi multimedia yang multifungsi</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="grey center" id="respon" data-magellan-target="respon">
+        <h3>Dapatkan solusi terbaik untuk bisnis Anda</h3>
+        <p class="subheader">Konsultasikan dan mulai membangun sistem sesuai yang Anda inginkan</p>
+        <br>
+<!--        <a class="large button" data-open="email">Mulai sekarang</a>-->
+        <a class="large button" data-open="email">Mulai sekarang</a>
+    </section>
+
+    <section class="footer">
+        <div class="row">
+            <div class="large-3 columns">
+                <iframe width="360" height="240" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Jalan+Sukolilo+Sejehtera+II+No+49,+Keputih,+Surabaya+City,+East+Java,+Indonesia&key=AIzaSyBXIeL7RGvV9b7uP3iodlK-xfMjkyuuNMc" allowfullscreen></iframe>
+            </div>
+            <div class="large-3 large-offset-1 columns">
+                <h3>Thinker Studio</h3>
+                <p>Perumahan Sukolilo Dian Regency
+                    <br>Jl Sukolilo Sejahtera II No.49
+                    <br>Keputih, Sukolilo
+                    <br>Surabaya 60111
+                    <br>
+                    <br>+62857-0778-8875
+                    <br>thinker.stu@gmail.com
+                </p>
+            </div>
+            <div class="large-2 columns">
+                <ul class="menu vertical">
+                    <li><strong>HALAMAN</strong></li>
+                    <li><a href="#">Portofolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Karir</a></li>
+                </ul>
+            </div>
+            <div class="large-3 columns">
+                <ul class="menu vertical">
+                    <li><strong>KONTAK KAMI</strong></li>
+                    <li><a href="https://www.facebook.com/thinkerStudio" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
+                    <li><a href="mailto:thinker.stu@gmail.com"><i class="fa fa-envelope"></i> Email</a></li>
+                    <li><a href="#"><i class="fa fa-whatsapp"></i> Whatsapp</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="row">
+            Copyright &copy 2016 Thinker Studio. All rights reserved
+        </div>
+    </footer>
+
+    <div class="small reveal" id="email" data-reveal>
+        <h3>Tanyakan apa saja</h3>
+<!--        <p class="lead">Your couch. It is mine.</p>-->
+        <form action="control.php" method="post">
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>Nama
+                        <input type="text" placeholder="Nama" name="name">
+                    </label>
+                </div>
+                <div class="large-12 columns">
+                    <label>Email
+                        <input type="email" placeholder="Email" name="email">
+                    </label>
+                </div>
+                <div class="large-12 columns">
+                    <label>Subjek
+                        <input type="text" placeholder="Subjek" name="subject">
+                    </label>
+                </div>
+                <div class="large-12 columns">
+                    <label>Pesan
+                        <textarea rows="3" name="message"></textarea>
+                    </label>
+                </div>
+                <button class="large button pull-right" type="submit">Kirim!</button>
+            </div>
+        </form>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/typed.js/js/typed.js"></script>
+    <script src="bower_components/what-input/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

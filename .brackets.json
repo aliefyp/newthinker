@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "jquery.js",
+        "C:/xampp/htdocs/newthinker/bower_components/jquery/src/ajax/jsonp.js",
+        "C:/xampp/htdocs/newthinker/bower_components/jquery/src/ajax/load.js"
+    ]
+}
