@@ -27,7 +27,11 @@ if(isset($POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thinker Studio | Home</title>
     <meta name="description" content="Thinker Studio is a IT solution community, based in Surabaya, East Java. We're not just programmers, we are innovators ! We blend technology & arts. We bring your ideas come to life.">
-    <meta name="robots" content="follow">
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="msnbot" content="index,follow" />
+    <meta name="author" content="Thinker Studio" />
+    <meta name="copyright" content="2016 www.thinkerstudio.info" />
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="bower_components/wow/css/libs/animate.css">
@@ -43,7 +47,7 @@ if(isset($POST['submit'])){
     </div>
     <div data-sticky-container>
         <div class="sticky" data-sticky stickTo="top" data-margin-top="0" id="thinkertop">
-            <nav class="top-bar" data-magellan data-options="barOffset:30;" activeClass="active">
+            <nav class="top-bar" data-magellan data-options="barOffset:30;" activeClass="active" >
                 <div class="top-bar-left show-for-medium">
                     <ul class="menu">
                         <a href="home"><li class="menu-text"><img src="css/img/logo.png"/></li></a>
@@ -51,10 +55,20 @@ if(isset($POST['submit'])){
                     </ul>
                 </div>
                 <div class="top-bar-right">
-                    <ul class="menu" data-dropdown-menu>
+                    <ul class="menu show-for-medium" data-dropdown-menu>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="http://blog.thinkerstudio.info">Blog</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><button href="error" class="button">Join with us</button></li>
+                        <li><a href="https://www.facebook.com/thinkerStudio" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a data-open="email"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                    <ul class="menu vertical show-for-small-only" data-dropdown-menu data-toggler data-animate="slide-in-down slide-out-up">
+                        <li><a href="#services">Services</a></li>
                         <li><a href="error">Works</a></li>
                         <li><a href="http://blog.thinkerstudio.info">Blog</a></li>
                         <li><a href="#">Career</a></li>
+                        <li><button href="error" class="button">Join with us</button></li>
                         <li><a href="https://www.facebook.com/thinkerStudio" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <li><a data-open="email"><i class="fa fa-envelope"></i></a></li>
                     </ul>
@@ -92,9 +106,9 @@ if(isset($POST['submit'])){
     </section>
 
 
-    <section class="center" id="fokus">
+    <section class="center" id="services">
         <div class="row" data-magellan>
-            <div class="large-3 small-6 columns">
+            <div class="large-3 small-12 columns">
                 <a href="#respon" class="subfokus">
                     <div class="callout wow slideInRight" id="thumbnail" data-animate="fade-in fade-out" data-wow-delay="0s">
                         <img src="css/img/img-consult.png">
@@ -103,7 +117,7 @@ if(isset($POST['submit'])){
                     </div>
                 </a>
             </div>
-            <div class="large-3 small-6 columns">
+            <div class="large-3 small-12 columns">
                 <a href="#respon" class="subfokus">
                     <div class="callout wow slideInRight" id="thumbnail" data-animate="fade-in fade-out" data-wow-delay=".5s">
                         <img src="css/img/img-si.png">
@@ -112,7 +126,7 @@ if(isset($POST['submit'])){
                     </div>
                 </a>
             </div>
-            <div class="large-3 small-6 columns">
+            <div class="large-3 small-12 columns">
                 <a href="#respon" class="subfokus">
                     <div class="callout wow slideInRight" id="thumbnail" data-animate="fade-in fade-out" data-wow-delay="1s">
                         <img src="css/img/img-design.png">
@@ -121,7 +135,7 @@ if(isset($POST['submit'])){
                     </div>
                 </a>
             </div>
-            <div class="large-3 small-6 columns">
+            <div class="large-3 small-12 columns">
                 <a href="#respon" class="subfokus">
                     <div class="callout wow slideInRight" id="thumbnail" data-animate="fade-in fade-out" data-wow-delay="1.5s">
                         <img src="css/img/img-app.png">
