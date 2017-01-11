@@ -58,8 +58,7 @@ if(isset($POST['submit'])){
                     <ul class="menu show-for-medium" data-dropdown-menu>
                         <li><a href="#services">Services</a></li>
                         <li><a href="http://blog.thinkerstudio.info">Blog</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><button href="error" class="button">Join with us</button></li>
+                        <li><button href="karir" class="button">Join with us</button></li>
                         <li><a href="https://www.facebook.com/thinkerStudio" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <li><a data-open="email"><i class="fa fa-envelope"></i></a></li>
                     </ul>
@@ -67,8 +66,7 @@ if(isset($POST['submit'])){
                         <li><a href="#services">Services</a></li>
                         <li><a href="error">Works</a></li>
                         <li><a href="http://blog.thinkerstudio.info">Blog</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><button href="error" class="button">Join with us</button></li>
+                        <li><button href="karir" class="button">Join with us</button></li>
                         <li><a href="https://www.facebook.com/thinkerStudio" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <li><a data-open="email"><i class="fa fa-envelope"></i></a></li>
                     </ul>
@@ -108,7 +106,7 @@ if(isset($POST['submit'])){
 
     <section class="center" id="services">
         <div class="row" data-magellan>
-            <div class="large-3 small-12 columns">
+            <div class="large-3 medium-6 small-12 columns">
                 <a href="#respon" class="subfokus">
                     <div class="callout wow slideInRight" id="thumbnail" data-animate="fade-in fade-out" data-wow-delay="0s">
                         <img src="css/img/img-consult.png">
@@ -117,7 +115,7 @@ if(isset($POST['submit'])){
                     </div>
                 </a>
             </div>
-            <div class="large-3 small-12 columns">
+            <div class="large-3 medium-6 small-12 columns">
                 <a href="#respon" class="subfokus">
                     <div class="callout wow slideInRight" id="thumbnail" data-animate="fade-in fade-out" data-wow-delay=".5s">
                         <img src="css/img/img-si.png">
@@ -126,7 +124,7 @@ if(isset($POST['submit'])){
                     </div>
                 </a>
             </div>
-            <div class="large-3 small-12 columns">
+            <div class="large-3 medium-6 small-12 columns">
                 <a href="#respon" class="subfokus">
                     <div class="callout wow slideInRight" id="thumbnail" data-animate="fade-in fade-out" data-wow-delay="1s">
                         <img src="css/img/img-design.png">
@@ -135,7 +133,7 @@ if(isset($POST['submit'])){
                     </div>
                 </a>
             </div>
-            <div class="large-3 small-12 columns">
+            <div class="large-3 medium-6 small-12 columns">
                 <a href="#respon" class="subfokus">
                     <div class="callout wow slideInRight" id="thumbnail" data-animate="fade-in fade-out" data-wow-delay="1.5s">
                         <img src="css/img/img-app.png">
@@ -149,8 +147,9 @@ if(isset($POST['submit'])){
 
     <section class="center" id="works">
         <div class="row">
-            <h1 class="section-title"><span class="left"></span>OUR WORKS<span class="right"></span></h1>
+            <h2 class="section-title"><span class="left"></span>OUR WORKS<span class="right"></span></h2>
         </div>
+        <br>
         <!-- <div class="row">
             <div class="large-6 columns">
                 <div class="row">
@@ -214,8 +213,8 @@ if(isset($POST['submit'])){
             </div>
         </div> -->
         <div class="row">
-            <div class="large-4 small-12 columns">
-                <a href="#">
+            <div class="large-4 medium-6 small-12 columns">
+                <a href="work/ojs.html" data-open="ojs">
                     <div class="callout">
                         <div class="row">
                             <div class="large-6 small-6 columns">
@@ -225,13 +224,13 @@ if(isset($POST['submit'])){
                                 <h6>Journal System</h6>
                                 <p class="subheader">JGLR, IJCP</p>
                                 <br>
-                                <button class="tiny button hollow" href="#">Read more</button>
+                                <button class="tiny button hollow" href="#" data-open="ojs">Read more</button>
                             </div>
                         </div>  
                     </div>
                 </a>
             </div>
-            <div class="large-4 small-12 columns">
+            <div class="large-4 medium-6 small-12 columns">
                 <a href="#">
                     <div class="callout">
                         <div class="row">
@@ -248,7 +247,7 @@ if(isset($POST['submit'])){
                     </div>
                 </a>
             </div>
-            <div class="large-4 small-12 columns">
+            <div class="large-4 medium-6 small-12 columns">
                 <a href="#">
                     <div class="callout">
                         <div class="row">
@@ -265,7 +264,7 @@ if(isset($POST['submit'])){
                     </div>
                 </a>
             </div>
-            <div class="large-4 small-12 columns">
+            <div class="large-4 medium-6 small-12 columns">
                 <a href="#">
                     <div class="callout">
                         <div class="row">
@@ -273,7 +272,7 @@ if(isset($POST['submit'])){
                                 <img src="css/img/work4.png" alt="ojs">
                             </div>
                             <div class="large-6 small-6 columns textcol">
-                                <h5>Ticketing</h5>
+                                <h6>Ticketing</h6>
                                 <p class="subheader">Side Story Family</p>
                                 <br>
                                 <button class="tiny button hollow" href="#">Read more</button>
@@ -282,31 +281,35 @@ if(isset($POST['submit'])){
                     </div>
                 </a>
             </div>
-            <div class="large-4 small-12 columns">
+            <div class="large-4 medium-6 small-12 columns">
                 <a href="#">
                     <div class="callout">
                         <div class="row">
                             <div class="large-6 small-6 columns">
-                                <img src="css/img/journal.jpg" alt="ojs">
+                                <img src="http://www.placehold.it/200x200" alt="ojs">
                             </div>
                             <div class="large-6 small-6 columns textcol">
-                                <h5>Judul</h5>
-                                <p class="subheader">Deskripsi</p>
+                                <h6>Adjusting</h6>
+                                <p class="subheader">GIA</p>
+                                <br>
+                                <button class="tiny button hollow" href="#">Read more</button>
                             </div>
                         </div>  
                     </div>
                 </a>
             </div>
-            <div class="large-4 small-12 columns">
+            <div class="large-4 medium-6 small-12 columns">
                 <a href="#">
                     <div class="callout">
                         <div class="row">
                             <div class="large-6 small-6 columns">
-                                <img src="css/img/journal.jpg" alt="ojs">
+                                <img src="http://www.placehold.it/200x200" alt="ojs">
                             </div>
                             <div class="large-6 small-6 columns textcol">
-                                <h5>Judul</h5>
-                                <p class="subheader">Deskripsi</p>
+                                <h6>Monitoring</h6>
+                                <p class="subheader">PAS</p>
+                                <br>
+                                <button class="tiny button hollow" href="#">Read more</button>
                             </div>
                         </div>  
                     </div>
@@ -331,7 +334,7 @@ if(isset($POST['submit'])){
             <!-- <div class="large-3 columns">
                 <iframe width="360" height="240" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Jalan+Sukolilo+Sejehtera+II+No+49,+Keputih,+Surabaya+City,+East+Java,+Indonesia&key=AIzaSyBXIeL7RGvV9b7uP3iodlK-xfMjkyuuNMc" allowfullscreen></iframe>
             </div> -->
-            <div class="large-3 large-offset-1 small-12 columns">
+            <div class="large-3 large-offset-1 medium-6 small-12 columns">
                 <img src="css/img/logo-white.png">
                 <p>Perumahan Sukolilo Dian Regency
                     <br>Jl Sukolilo Sejahtera II No.49
@@ -342,7 +345,7 @@ if(isset($POST['submit'])){
                     <br><i class="fa fa-envelope"></i> thinker.stu@gmail.com
                 </p>
             </div>
-            <div class="large-2 small-6 columns">
+            <div class="large-2 medium-3 small-6 columns">
                 <ul class="menu vertical">
                     <li><strong>CONNECT</strong></li>
                     <li><a href="#">Works</a></li>
@@ -350,7 +353,7 @@ if(isset($POST['submit'])){
                     <li><a href="karir">Career</a></li>
                 </ul>
             </div>
-            <div class="large-2 small-6 columns">
+            <div class="large-2 medium-3 small-6 columns">
                 <ul class="menu vertical">
                     <li><strong>LINK</strong></li>
                     <li><a href="http://www.ideplex.com">Ideplex</a></li>
@@ -361,22 +364,22 @@ if(isset($POST['submit'])){
                     <li><strong>BLOG</strong></li>
                 </ul>
             </div> -->
-            <div class="large-3 small -12 end columns">
+            <div class="large-3 medium-12 small-12 end columns">
                 <ul class="menu vertical">
-                    <li><strong>KIRIM PESAN</strong></li>
+                    <li><strong>TALK TO US</strong></li>
                 </ul>
                 <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
                     <div class="row">
                         <div class="input-group">
-                            <input class="input-group-field" type="text" placeholder="Nama" name="name" required>
+                            <input class="input-group-field" type="text" placeholder="Name" name="name" required>
                             <span class="input-group-label"><i class="fa fa-font"></i></span>  
                         </div>
                         <div class="input-group">
                             <input class="input-group-field" type="email" placeholder="Email" name="email" required>
                             <span class="input-group-label"><i class="fa fa-envelope-o"></i></span>  
                         </div>
-                        <textarea rows="3" placeholder="Pesan" name="message" required></textarea>
-                        <button class="button pull-right" type="submit">Kirim!</button>
+                        <textarea rows="3" placeholder="Message" name="message" required></textarea>
+                        <button class="button pull-right" type="submit">SEND!</button>
                     </div>
                 </form>
             </div>
@@ -390,26 +393,43 @@ if(isset($POST['submit'])){
     </footer>
 
     <div class="tiny reveal" id="email" data-reveal data-close-on-click="true" data-animation-in="slide-in" data-animation-out="slide-out">
-        <h3>Tanyakan apa saja</h3>
-<!--        <p class="lead">Your couch. It is mine.</p>-->
+        <h3>Talk to us</h3>
+        <p class="subheader">We'll sent you an email shortly</p>
+        <br>
         <form action="" method="post">
             <div class="row">
                 <div class="input-group">
-                    <input class="input-group-field" type="text" placeholder="Nama" name="name" required>
+                    <input class="input-group-field" type="text" placeholder="Name" name="name" required>
                     <span class="input-group-label"><i class="fa fa-font"></i></span>  
                 </div>
                 <div class="input-group">
                     <input class="input-group-field" type="email" placeholder="Email" name="email" required>
                     <span class="input-group-label"><i class="fa fa-envelope-o"></i></span>  
                 </div>
-                <textarea rows="3" placeholder="Pesan" name="message" required></textarea>
-                <button class="button pull-right" type="submit">Kirim!</button>
+                <textarea rows="3" placeholder="Message" name="message" required></textarea>
+                <button class="button pull-right" type="submit">SEND!</button>
             </div>
         </form>
         <button class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
+
+
+    <!-- MODAL OJS -->
+    <!-- <div class="medium reveal" id="ojs" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+        <div class="row">
+            <div class="large-6 small-6 columns">
+                <img src="css/img/work1.png" alt="scm">
+            </div>
+            <div class="large-6 small-6 columns textcol">
+                <h6>Journal System</h6>
+                <p class="subheader">JGLR, IJCP</p>
+                <br>
+                <button class="tiny button hollow" href="#">Read more</button>
+            </div>
+        </div>  
+    </div> -->
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/typed.js/js/typed.js"></script>
