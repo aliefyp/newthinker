@@ -119,6 +119,7 @@ button, .button {
     padding-left: 4rem;
     position: fixed;
     vertical-align: middle;
+    border-bottom: 1px solid #e2e2e2;
     
     .top-bar-right {
         padding: .5rem;
@@ -142,6 +143,7 @@ button, .button {
     // width: 100%;
     // z-index:9999;
 
+    border-bottom: 1px solid #e2e2e2;
 
     .title-bar-title {
         img {
@@ -202,28 +204,44 @@ section#banner {
     text-align: left;
     vertical-align: middle;
     font-size:1.5rem;
+    .pc {
+        h4{
+            font-family: $font2;
+            margin-bottom:0;
+        }
 
-    h4{
-        font-family: $font2;
-        margin-bottom:0;
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-family: $font2;
+            bottom: 30%;
+            position:absolute;
+        }
+
+        a.button {
+            color: $white;
+            border-color: $white;
+            bottom: 20%;
+            position:absolute;
+            font-family: $font2;
+        }
     }
 
-    h1 {
-        font-size: 4rem;
-    }
+    .mobile {
+        text-align: center;
+        .title {
+            font-size: 2rem;
+            text-align: center;
+            bottom: inherit;
+        }
 
-    p {
-        font-family: $font2;
-        bottom: 30%;
-        position:absolute;
-    }
-
-    a.button {
-        color: $white;
-        border-color: $white;
-        bottom: 20%;
-        position:absolute;
-        font-family: $font2;
+        a.button {
+            color: $white;
+            border-color: $white;
+            font-family: $font2;
+        }
     }
 }
 
@@ -334,7 +352,6 @@ section#works {
             opacity: 0.8;
         }
     }
-
 }
 
 section#respon {
@@ -372,11 +389,23 @@ section#sub-banner {
       rgba(0, 0, 0, 0.01), 
       rgba(0, 0, 0, 0.01)
     ),url("img/paven.png");
+    // background: $white;
+    color: #999;
+    padding-top: 8rem;
+    padding-bottom: 1rem;
+    padding-left: 5rem;
+}
+
+section#work-desc {
+    a {
+        font-weight: bold;
+    }
 }
 
 
 .subheader{
     margin-top: .5rem;
+    color: #999
 }
 
 section.footer {

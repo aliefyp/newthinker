@@ -24,7 +24,7 @@ if(isset($POST['submit'])){
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Thinker Studio | Home</title>
     <meta name="description" content="Thinker Studio is a IT solution community, based in Surabaya, East Java. We're not just programmers, we are innovators ! We blend technology & arts. We bring your ideas come to life.">
     <meta name="robots" content="index, follow" />
@@ -36,18 +36,22 @@ if(isset($POST['submit'])){
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="bower_components/wow/css/libs/animate.css">
     <link rel="icon" 
-      type="image/png" 
-      href="css/img/thinker-icon.png">
+    type="image/png" 
+    href="css/img/thinker-icon.png">
 </head>
 
 <body>
-    <div class="title-bar" data-responsive-toggle="thinkertop" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle></button>
-        <div class="title-bar-title"><img src="css/img/logo.png" alt=""></div>
+    <div data-sticky-container class="hide-for-medium">
+        <div class="sticky" data-sticky stickTo="top" data-margin-top="0">
+            <div class="title-bar" data-toggle="thinkertop" data-responsive-toggle="thinkertop" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle></button>
+                <div class="title-bar-title"><img src="css/img/logo.png" alt=""></div>
+            </div>
+        </div>
     </div>
     <div data-sticky-container>
         <div class="sticky" data-sticky stickTo="top" data-margin-top="0" id="thinkertop">
-            <nav class="top-bar" data-magellan data-options="barOffset:30;" activeClass="active" >
+            <nav class="top-bar" activeClass="active" data-topbar  data-toggler data-animate="fade-in fade-out">
                 <div class="top-bar-left show-for-medium">
                     <ul class="menu">
                         <a href="home"><li class="menu-text"><img src="css/img/logo.png"/></li></a>
@@ -57,7 +61,7 @@ if(isset($POST['submit'])){
                 <div class="top-bar-right">
                     <ul class="menu show-for-medium" data-dropdown-menu>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="http://blog.thinkerstudio.info">Blog</a></li>
+                        <li><a href="http://blog.thinkerstudio.info" target="_blank">Blog</a></li>
                         <li><button href="karir" class="button">Join with us</button></li>
                         <li><a href="https://www.facebook.com/thinkerStudio" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <li><a data-open="email"><i class="fa fa-envelope"></i></a></li>
@@ -65,7 +69,7 @@ if(isset($POST['submit'])){
                     <ul class="menu vertical show-for-small-only" data-dropdown-menu data-toggler data-animate="slide-in-down slide-out-up">
                         <li><a href="#services">Services</a></li>
                         <li><a href="error">Works</a></li>
-                        <li><a href="http://blog.thinkerstudio.info">Blog</a></li>
+                        <li><a href="http://blog.thinkerstudio.info" target="_blank">Blog</a></li>
                         <li><button href="karir" class="button">Join with us</button></li>
                         <li><a href="https://www.facebook.com/thinkerStudio" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <li><a data-open="email"><i class="fa fa-envelope"></i></a></li>
@@ -76,16 +80,15 @@ if(isset($POST['submit'])){
     </div>
 
 
-    <section class="center" id="banner">
-        <div class="row show-for-medium" data-magellan>
+    <section id="banner">
+        <div class="row show-for-medium pc" data-magellan>
             <h4>WE DEVELOP</h4>
             <h1 id="tagline"></h1>
             <a class="large hollow button" href="#tentang">Get Started!</a>
         </div>
-        <div class="row show-for-small-only">
-            <h4>Membantu Anda mengembangkan</h4>
-            <h2>Aplikasi berbasis web</h2>
-            <a class="large hollow button" href="#tentang" data-animate="fade-in fade-out" >Get Started!</a>
+        <div class="row show-for-small-only mobile">
+            <h1 class="title">THINKER STUDIO</h1>
+            <!--    <a class="large hollow button" href="#tentang" data-animate="fade-in fade-out" >Get Started!</a> -->
         </div>
     </section>
 
@@ -224,14 +227,14 @@ if(isset($POST['submit'])){
                                 <h6>Journal System</h6>
                                 <p class="subheader">JGLR, IJCP</p>
                                 <br>
-                                <button class="tiny button hollow" href="#" data-open="ojs">Read more</button>
+                                <button class="tiny button hollow" href="work/ojs.html"" data-open="ojs">Read more</button>
                             </div>
                         </div>  
                     </div>
                 </a>
             </div>
             <div class="large-4 medium-6 small-12 columns">
-                <a href="#">
+                <a href="work/scm.html">
                     <div class="callout">
                         <div class="row">
                             <div class="large-6 small-6 columns">
@@ -241,14 +244,14 @@ if(isset($POST['submit'])){
                                 <h6>SCM</h6>
                                 <p class="subheader">Log.is</p>
                                 <br>
-                                <button class="tiny button hollow" href="#">Read more</button>
+                                <button class="tiny button hollow" href="work/scm.html">Read more</button>
                             </div>
                         </div>  
                     </div>
                 </a>
             </div>
             <div class="large-4 medium-6 small-12 columns">
-                <a href="#">
+                <a href="work/elearning.html">
                     <div class="callout">
                         <div class="row">
                             <div class="large-6 small-6 columns">
@@ -258,74 +261,73 @@ if(isset($POST['submit'])){
                                 <h6>E-Learning</h6>
                                 <p class="subheader">Dokter Belajar</p>
                                 <br>
-                                <button class="tiny button hollow" href="#">Read more</button>
+                                <button class="tiny button hollow" href="work/elearning.html">Read more</button>
                             </div>
                         </div>  
                     </div>
                 </a>
             </div>
             <div class="large-4 medium-6 small-12 columns">
-                <a href="#">
+                <a href="work/profile.html">
                     <div class="callout">
                         <div class="row">
                             <div class="large-6 small-6 columns">
                                 <img src="css/img/work4.png" alt="ojs">
                             </div>
                             <div class="large-6 small-6 columns textcol">
-                                <h6>Ticketing</h6>
-                                <p class="subheader">Side Story Family</p>
+                                <h6>Profile</h6>
+                                <p class="subheader">BUBW Indonesia</p>
                                 <br>
-                                <button class="tiny button hollow" href="#">Read more</button>
+                                <button class="tiny button hollow" href="work/profile.html">Read more</button>
                             </div>
                         </div>  
                     </div>
                 </a>
             </div>
             <div class="large-4 medium-6 small-12 columns">
-                <a href="#">
+                <a href="work/adjusting.html">
                     <div class="callout">
                         <div class="row">
                             <div class="large-6 small-6 columns">
-                                <img src="http://www.placehold.it/200x200" alt="ojs">
+                                <img src="css/img/work5.png" alt="ojs">
                             </div>
                             <div class="large-6 small-6 columns textcol">
                                 <h6>Adjusting</h6>
                                 <p class="subheader">GIA</p>
                                 <br>
-                                <button class="tiny button hollow" href="#">Read more</button>
+                                <button class="tiny button hollow" href="work/adjusting.html">Read more</button>
                             </div>
                         </div>  
                     </div>
                 </a>
             </div>
             <div class="large-4 medium-6 small-12 columns">
-                <a href="#">
+                <a href="work/monitoring.html">
                     <div class="callout">
                         <div class="row">
                             <div class="large-6 small-6 columns">
-                                <img src="http://www.placehold.it/200x200" alt="ojs">
+                                <img src="css/img/work6.png" alt="ojs">
                             </div>
                             <div class="large-6 small-6 columns textcol">
                                 <h6>Monitoring</h6>
                                 <p class="subheader">PAS</p>
                                 <br>
-                                <button class="tiny button hollow" href="#">Read more</button>
+                                <button class="tiny button hollow" href="work/monitoring.html">Read more</button>
                             </div>
                         </div>  
                     </div>
                 </a>
             </div>
-
         </div>
         <br>
-        <a class="button hollow">See more</a>
+        <h6 class="subheader">and many more</h6>
     </section>
 
     <section class="grey center" id="respon" data-magellan-target="respon">
         <h3>Get a best solution for your business.</h3>
         <p class="subheader">Consult now and start to build your own system.</p>
         <br>
-<!--        <a class="large button" data-open="email">Mulai sekarang</a>-->
+        <!--        <a class="large button" data-open="email">Mulai sekarang</a>-->
         <a class="large button" data-open="email">Start Now</a>
     </section>
 
@@ -435,6 +437,7 @@ if(isset($POST['submit'])){
     <script src="bower_components/typed.js/js/typed.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="bower_components/foundation-sites/dist/plugins/foundation.responsiveMenu.js"></script>
     <script src="bower_components/wow/dist/wow.min.js"></script>
     <script src="js/app.js"></script>
 </body>
